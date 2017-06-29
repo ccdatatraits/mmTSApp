@@ -1,0 +1,39 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title>
+            PixelTester
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content padding id="page2">
+    <form id="pixelTester-form1">
+        <ion-item id="pixelTester-input2">
+            <ion-label>
+                mt_id
+            </ion-label>
+            <ion-input type="text" placeholder="MM_PIXEL_ID" [(ngModel)]="mt_id" name="mt_id"></ion-input>
+        </ion-item>
+        <ion-item id="pixelTester-input3">
+            <ion-label>
+                mt_adid
+            </ion-label>
+            <ion-input type="text" placeholder="MM_AD_ID" [(ngModel)]="mt_adid" name="mt_adid"></ion-input>
+        </ion-item>
+        <div class="spacer" style="height:100px;" id="pixelTester-spacer1"></div>
+        <button id="pixelTester-button1" ion-button color="positive" block (click)="buttonPressed()">
+        Fire Pixel!
+      </button>
+    </form>
+    <ion-item>
+        <ion-input type="number" [value]="qty"></ion-input>
+    </ion-item>
+    <ion-item id="pixelTester-textarea1">
+        <ion-label>
+            Console
+        </ion-label>
+        <ion-textarea [value]="output"></ion-textarea>
+    </ion-item>
+</ion-content>
